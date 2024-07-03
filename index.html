@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Calculation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Attendance Calculation</h1>
+            <button type="button" onclick="clearLocalStorage()" class="clear-btn">Clear All</button>
+        </div>
+        <form id="attendanceForm">
+            <div class="time-pair">
+                <div>
+                    <label for="morningLogin">Morning Login:</label>
+                    <input type="text" id="morningLogin" class="time-input" placeholder="HH:MM:SS">
+                </div>
+                <div>
+                    <label for="brunchLogout">Logout for Brunch:</label>
+                    <input type="text" id="brunchLogout" class="time-input" placeholder="HH:MM:SS">
+                </div>
+            </div>
+            <div class="time-pair">
+                <div>
+                    <label for="brunchLogin">Login after Brunch:</label>
+                    <input type="text" id="brunchLogin" class="time-input" placeholder="HH:MM:SS">
+                </div>
+                <div>
+                    <label for="lunchLogout">Logout for Lunch:</label>
+                    <input type="text" id="lunchLogout" class="time-input" placeholder="HH:MM:SS">
+                </div>
+            </div>
+            <div class="time-pair">
+                <div>
+                    <label for="lunchLogin">Login after Lunch:</label>
+                    <input type="text" id="lunchLogin" class="time-input" placeholder="HH:MM:SS">
+                </div>
+                <div>
+                    <label for="teaLogout">Logout for Tea Break:</label>
+                    <input type="text" id="teaLogout" class="time-input" placeholder="HH:MM:SS">
+                </div>
+            </div>
+            <div class="time-pair">
+                <div>
+                    <label for="teaLogin">Login after Tea Break:</label>
+                    <input type="text" id="teaLogin" class="time-input" placeholder="HH:MM:SS">
+                </div>
+                <div>
+                    <label for="extraLogout">Extra Logout (optional):</label>
+                    <input type="text" id="extraLogout" class="time-input" placeholder="HH:MM:SS">
+                </div>
+            </div>
+            <div class="time-pair">
+                <div>
+                    <label for="extraLogin">Extra Login (optional):</label>
+                    <input type="text" id="extraLogin" class="time-input" placeholder="HH:MM:SS">
+                </div>
+                <div>
+                    <label for="eveningLogout">Evening Logout:</label>
+                    <input type="text" id="eveningLogout" class="time-input" placeholder="HH:MM:SS">
+                </div>
+            </div>
+            <button type="button" onclick="calculateHours()">Calculate Total Hours</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
